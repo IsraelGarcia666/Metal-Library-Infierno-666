@@ -1,0 +1,556 @@
+/*  Module 2: CSS (CSS Part 1)*/
+
+/* 1. ========Reset defaults======== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ========2. SELECTORS ======== */
+
+/* -- 2.1 Type Selectors-- */
+
+/* Headings */
+
+/* 2. Type Selectors */
+h1 {
+  font-size: 4.1em;
+  color: #f4bd07;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  font-weight: 100; /* lighter weight */
+  font-family: "Sancreek", serif;
+}
+
+nav a {
+  font-family: "Sancreek", serif;
+  font-weight: 300; /* lighter look */
+  font-size: 1.6em; /* adjust size */
+  color: #3205f8 !important;
+  text-decoration: none; /* remove underline */
+  margin: 0 10px; /* spacing between links */
+}
+
+/* Aside */
+aside {
+  display: flex;
+  justify-content: center;
+}
+
+/* Subheadings */
+h2 {
+  font-size: 1.6em;
+  color: #b5b3ae;
+  margin-bottom: 8px;
+  font-family: "Sancreek", serif;
+  font-weight: 25; /* lighter weight */
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+/* Form */
+form {
+  background-color: #131111;
+  border: #814242 1px solid;
+  padding: 15px;
+  margin: 20px auto;
+  max-width: 900px;
+  border-radius: 8px;
+}
+
+/* Paragraph */
+p {
+  margin-bottom: 10px;
+  line-height: 3;
+  font-size: 14px;
+}
+
+/* Navigation */
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+
+nav a {
+  font-family: "Sancreek", serif;
+  font-size: 1.2rem;
+  color: #f41b07;
+  text-decoration: none;
+}
+
+/* Full-screen background for the entire website */
+html {
+  min-height: 100%;
+  background-color: #121212;
+  background-image: url("Wallpaper-Medieval-fantasy-landscape.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+/* Center the website content */
+body {
+  font-family: "Engravers MT", sans-serif;
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 16px;
+  color: #f1de06;
+}
+
+header {
+  background: url("banner.png") center top no-repeat;
+  background-size: cover; /* instead of cover */
+  height: 40vh; /* enough to show full image */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border-radius: 15px;
+  opacity: 0.8;
+}
+
+/* output (slide bar)*/
+output {
+  margin-left: 10px;
+  font-weight: bold;
+  color: #ebd10e;
+}
+
+/* section */
+section {
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 20px;
+}
+
+/* Images */
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* 2.2 -- Class selectors -- */
+
+/* Custom font class */
+.sancreek-regular {
+  font-family: "Sancreek", serif;
+  font-weight: 100;
+  font-style: normal;
+}
+
+/* Targeting form sections */
+.form-section {
+  background-color: #110f0fe8;
+  padding: 25px;
+  border: 4px solid #f40707;
+  border-radius: 8px;
+}
+
+/* ===== Artist Explorer ===== */
+
+/* Keep the introductory text readable. */
+#explorer p {
+  line-height: 1.6;
+}
+
+/* Arrange the search controls vertically. */
+#explorer .explorer-controls {
+  display: grid;
+  gap: 12px;
+  width: 100%;
+  max-width: 600px;
+  margin: 24px auto;
+}
+
+/* Softer, more readable labels for the Artist Explorer. */
+#explorer .explorer-controls label {
+  font-family: "Trebuchet MS", Arial, sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #11e523;
+  letter-spacing: 0.3px;
+}
+
+/* Style the dropdown and search input. */
+#explorer .explorer-controls select,
+#explorer .explorer-controls input {
+  width: 100%;
+  min-width: 0;
+  padding: 12px;
+  background-color: #1f1f1f;
+  color: #aba799;
+  border: 1px solid #f40707;
+  border-radius: 6px;
+  font-family: Arial, sans-serif;
+}
+
+/* Search button */
+#explorer .explorer-controls button {
+  padding: 12px 18px;
+  background-color: #7a0909;
+  color: #bcb2c8;
+  border: 1px solid #171515;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: light;
+}
+
+#explorer .explorer-controls button:hover {
+  background-color: #8505f5bf;
+}
+
+/* Container for the music information retrieved by JavaScript */
+#artist-results {
+  margin-top: 24px;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.85);
+  border: 1px solid #814242;
+  border-radius: 8px;
+  overflow-wrap: anywhere;
+
+  /* Readable typography for API results */
+  font-family: "Trebuchet MS", Arial, sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #e6cfa8;
+}
+
+/* 2.3 -- ID Selectors -- */
+
+/* Targets the main title */
+#main-title {
+  text-align: center;
+  font-size: 4em;
+  color: #f4bd07;
+  margin-bottom: 20px;
+  font-family: "Sancreek", serif;
+  font-weight: 100; /* lighter weight */
+}
+
+/* Targets the quote section */
+#quote {
+  text-align: center;
+  font-style: italic;
+  color: #ebeadf; /* white text */
+  margin: 20px auto;
+  max-width: 600px;
+  padding: 10px;
+  font-size: 1.5em;
+}
+
+/* Targets the media section */
+#media {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+  align-items: center;
+  margin: 30px auto;
+}
+
+/*  2.4 -- Multiple Class Selectors -- */
+
+/* Highlighted important text */
+.highlighted.important {
+  background-color: #322f2fe8; /* dark background */
+  color: #f4bd07; /* yellow text */
+  border: 2px solid #f40707; /* red border */
+  padding: 10px;
+}
+
+/* Sancreek font with highlighted style */
+.sancreek-regular.highlighted {
+  background-color: #322f2fe8; /* dark background */
+  color: #0ccf3d; /* green text */
+  border: 2px solid #f40707; /* red border */
+  padding: 10px;
+}
+
+/* 2.5 -- Attribute Selectors -- */
+
+/* Styling form inputs */
+
+/* Unified Dark Theme for Form Elements */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+input[type="range"],
+input[list],
+select,
+textarea,
+input[type="checkbox"],
+input[type="radio"] {
+  background-color: #1f1f1f; /* dark background */
+  color: #0ccf3d; /* green text */
+  border: 1px solid #f40707; /* red border */
+  padding: 5px;
+  font-size: 14px;
+}
+
+/* Checkbox and Radio Specific Styling */
+input[type="checkbox"],
+input[type="radio"] {
+  accent-color: #0ccf3d; /* green checkmark or dot */
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+}
+
+/* Custom dark checkboxes and radio buttons */
+input[type="checkbox"],
+input[type="radio"] {
+  -webkit-appearance: none; /* Remove default styling (Chrome/Safari) */
+  -moz-appearance: none; /* Remove default styling (Firefox) */
+  appearance: none; /* Remove default styling (standard) */
+
+  width: 18px;
+  height: 18px;
+  background-color: #1f1f1f; /* Dark background */
+  border: 2px solid #4607f4; /* Red border */
+  border-radius: 4px; /* Rounded for checkbox */
+  cursor: pointer;
+  position: relative;
+}
+
+/* Checkbox checked state */
+input[type="checkbox"]:checked {
+  background-color: #0ccf3d; /* Green when checked */
+}
+
+/* Radio buttons: make them circular */
+input[type="radio"] {
+  border-radius: 50%;
+}
+
+/* Radio checked state */
+input[type="radio"]:checked {
+  background-color: #08e43f; /* Green dot */
+}
+
+/* Range Slider Styling */
+input[type="range"] {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 6px;
+  background: #1f1f1f;
+  border: 1px solid #f40707;
+  border-radius: 4px;
+}
+
+/* Range Slider Thumb */
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  background: #0ccf3d;
+  border-radius: 25%;
+  cursor: pointer;
+}
+
+input[type="range"]::-moz-range-thumb {
+  width: 16px;
+  height: 16px;
+  background: #0ccf3d;
+  border-radius: 25%;
+  cursor: pointer;
+}
+
+/* Submit button styling */
+
+/* Force dark theme on submit button */
+input[type="submit"] {
+  -webkit-appearance: none; /* Remove default browser style */
+  -moz-appearance: none;
+  appearance: none;
+
+  background-color: #2ae41925; /* Dark Green background */
+  color: #ddf3f2; /* Green text */
+  border: 2px solid #0f0f0f; /* black border */
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  width: 100%; /* Align with other fields */
+  box-sizing: border-box;
+  display: block;
+  text-align: center;
+}
+
+input[type="submit"]:hover {
+  background-color: #02eb0eb2; /* Green background on hover */
+  color: #d4dcdd; /* light text */
+}
+
+img[src*="Metal_library_logo.png"] {
+  border: 1px solid #f40707;
+  border-radius: 50px;
+  width: 600px;
+  height: 500px;
+  display: block;
+  margin: 0 auto;
+}
+
+/* -- 2.6 --Descendant Combinators -- */
+
+/* Targets labels (descendants of form) */
+.form-section label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
+  color: #f4bd07;
+}
+
+/* -- 2.7 -- Multiple Selectors -- */
+
+/* header and footer */
+header,
+footer {
+  background-color: black;
+  padding: 50px;
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 5px;
+}
+
+/* -- 2.8 -- Chaining -- */
+
+h1.title {
+  font-size: 4em;
+  color: #f4bd07;
+  text-align: center;
+}
+
+/* 2.9 -- Pseudo-classes -- */
+
+/* Logo hover effect */
+img[src*="Metal_library_logo.png"]:hover {
+  transform: scale(1.2); /* enlarge */
+  opacity: 0.3; /* slightly transparent */
+  border-color: #0ccf3d; /* change border to green */
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease;
+}
+
+/* Styles specifically for the "Other Sources" links */
+.source-links a {
+  color: #072bf4 !important; /* Default color for unvisited links */
+}
+
+.source-links a:visited {
+  color: #3eeb09 !important; /* for visited links */
+}
+
+.source-links a:hover {
+  color: #dd0b0b !important; /*red on hover */
+  text-decoration: underline;
+}
+
+nav a:active {
+  color: #0be642 !important; /* green when clicked */
+  transform: scale(1.95); /* shrink effect */
+}
+
+iframe {
+  border: none;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  header {
+    height: 30vh;
+    background-size: cover; /* Ensures the image covers the whole area without stretching */
+    background-position: center; /* Centers the image within the header */
+    background-repeat: no-repeat; /* Prevents the image from tiling/repeating */
+  }
+  nav a {
+    font-size: 1rem;
+  }
+  section {
+    width: 95%;
+  }
+}
+
+/* Mobile layout: screens 480px wide or smaller */
+@media (max-width: 480px) {
+  /* Let the header grow naturally with its contents */
+  header {
+    height: auto;
+    min-height: 220px;
+    padding: 24px 12px;
+    margin-top: 16px;
+  }
+
+  /* Override the larger h1.title desktop font size */
+  header h1.title {
+    font-size: clamp(1.5rem, 7vw, 2rem);
+    line-height: 1.2;
+    margin: 0 0 12px;
+  }
+
+  nav {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .form-section {
+    padding: 15px;
+  }
+}
+
+footer {
+  background-color: rgba(0, 0, 0, 0.3); /* semi-transparent black */
+  padding: 20px;
+  text-align: center;
+  color: #f4bd07; /* keep your yellow text */
+}
+
+#error-fallback-message {
+  /* Hide the element by default so it never shows during normal operation */
+  display: none;
+  color: red;
+  font-size: 24px;
+  text-align: center;
+  padding: 20px;
+  border: 2px solid red;
+  background-color: black;
+}
+
+/* ===== Responsive Infierno Media ===== */
+
+/* Keep media containers within the available screen width. */
+#media article,
+#media figure {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+}
+
+/* Make external media adapt to mobile screens. */
+#media iframe,
+#media embed {
+  display: block;
+  width: 100%;
+  max-width: 560px;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  margin: 0 auto;
+}
+
+/* Preserve the logo proportions on smaller screens. */
+#media img[src*="Metal_library_logo.png"] {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+}

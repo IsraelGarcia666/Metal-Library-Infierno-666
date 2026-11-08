@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Character encoding and responsive layout -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Website information -->
+    <title>Metal Library Infierno 666 | Artist Explorer</title>
+    <meta name="author" content="Israel Garcia" />
+    <meta
+      name="description"
+      content="Explore heavy metal artists, albums, and tracks through an interactive music library."
+    />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sancreek&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Main stylesheet -->
+    <link rel="stylesheet" href="styles.css" />
+
+    <!-- Display a fallback message when JavaScript is disabled -->
+    <noscript>
+      <style>
+        #error-fallback-message {
+          display: block !important;
+        }
+      </style>
+    </noscript>
+
+    <!-- Metal Library: AJAX application -->
+    <script src="script.js" defer></script>
+  </head>
+
+  <body>
+    <!-- Visibility, HIDDEN ELEMENT -->
+
+    <div id="error-fallback-message">
+      Welcome to hell!
+      <br />
+      <a href="index.html">Go Home</a>
+    </div>
+
+    <header>
+      <h1 class="title">Metal Library Infierno 666</h1>
+      <nav>
+        <a href="#explorer">Artist Explorer</a>
+        <a href="#quote">Quote</a>
+        <a href="#media">Infierno Media</a>
+      </nav>
+    </header>
+
+    <main>
+      <!-- Metal Library: interactive artist explorer -->
+      <section id="explorer" class="form-section">
+        <h2>Explore the Metal Archives</h2>
+
+        <p>
+          Discover metal artists, their albums, and tracks through our music
+          library.
+        </p>
+
+        <div class="explorer-controls">
+          <label for="artist-select">Choose an artist:</label>
+          <select id="artist-select">
+            <option value="">Select an artist</option>
+            <option value="Iron Maiden">Iron Maiden</option>
+            <option value="Judas Priest">Judas Priest</option>
+            <option value="Kreator">Kreator</option>
+            <option value="Metallica">Metallica</option>
+          </select>
+
+          <label for="artist-search">Or search for an artist:</label>
+          <input type="text" id="artist-search" placeholder="e.g. Death" />
+
+          <button type="button" id="search-button">Search the Archives</button>
+        </div>
+
+        <!-- JavaScript will display API results here -->
+        <div id="artist-results" aria-live="polite">
+          <p>Choose an artist or enter a name to begin exploring.</p>
+        </div>
+      </section>
+
+      <aside>
+        <blockquote id="quote">
+          “Abandon silence, all ye who enter here — for where words perish,
+          music screams.”—<br />
+          Inspired by Inferno, Canto III, Dante Alighieri.
+        </blockquote>
+      </aside>
+
+      <section id="media">
+        <h2>Infierno Media</h2>
+        <article>
+          <!--Figure with Image and Caption-->
+          <figure>
+            <img
+              src="Metal_library_logo.png"
+              alt="Metal Library logo"
+              width="500"
+              height="400"
+            />
+            <figcaption>
+              Metal Library Infierno 666 - A sanctuary for metal enthusiasts.
+            </figcaption>
+          </figure>
+          <br />
+
+          <h3>Our Partners:</h3>
+
+          <!--Embed External Media-->
+          <embed
+            src="https://www.themetalmag.com/category/read-each-issue-for-free-on-the-site-and-keep-history-in-your-collection/.pdf"
+            type="application/pdf"
+            width="560"
+            height="315"
+          /><br />
+          <p>Explore the ultimate metal music database at The Metal Mag.</p>
+          <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/fnL7RayhPVk?si=TSJ31qgFl2no7bxh"
+            title="YouTube video player"
+            allow="
+              accelerometer;
+              autoplay;
+              clipboard-write;
+              encrypted-media;
+              gyroscope;
+              picture-in-picture;
+              web-share;
+            "
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+          ></iframe>
+
+          <p>Metal-Evolution, The history of metal.</p>
+
+          <div class="source-links">
+            <h4>Other Sources</h4>
+            <!--Media Links-->
+            <p>
+              <a href="https://www.metal-archives.com/" target="_blank"
+                >Metal-Archives</a
+              >
+              |
+              <a
+                href="https://www.themetalverse.net/the-best-metal-blogs-in-2024/"
+                target="_blank"
+                >Metalverse</a
+              >
+              |
+              <a
+                href="https://www.metal-archives.com/artists/Israel_Real/53762y"
+                target="_blank"
+                >CEO</a
+              >
+            </p>
+          </div>
+        </article>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2025 Metal Library Infierno 666. All rights reserved.</p>
+    </footer>
+  </body>
+</html>
