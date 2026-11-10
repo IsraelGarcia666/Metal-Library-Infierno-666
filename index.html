@@ -85,6 +85,35 @@
         <div id="artist-results" aria-live="polite">
           <p>Choose an artist or enter a name to begin exploring.</p>
         </div>
+
+        <!-- ===== Automatically retrieved album catalog ===== -->
+        <div id="discography">
+          <h3>Artist Discography</h3>
+
+          <p class="catalog-source">
+            Available releases from the Apple Music catalog.
+          </p>
+
+          <div id="discography-results" aria-live="polite">
+            <p>Search for an artist to discover their albums.</p>
+          </div>
+        </div>
+
+        <!-- ===== Album Explorer ===== -->
+        <div id="album-controls" class="explorer-controls">
+          <h3>Explore an Album</h3>
+
+          <label for="album-search">Album title:</label>
+
+          <input type="text" id="album-search" placeholder="e.g. Senjutsu" />
+
+          <button type="button" id="album-search-button">Find Album</button>
+        </div>
+
+        <!-- JavaScript will display album information here -->
+        <div id="album-results" aria-live="polite">
+          <p>Select an artist and enter an album title to explore.</p>
+        </div>
       </section>
 
       <aside>
