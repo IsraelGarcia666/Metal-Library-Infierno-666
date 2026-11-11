@@ -174,6 +174,21 @@ nav a:active {
   font-size: 14px;
 }
 
+/* Keep the artist search field dark during Chrome autofill. */
+#explorer #artist-search:-webkit-autofill,
+#explorer #artist-search:-webkit-autofill:hover,
+#explorer #artist-search:-webkit-autofill:focus {
+  -webkit-text-fill-color: var(--input-text);
+  -webkit-box-shadow: 0 0 0 1000px var(--input-background) inset;
+  caret-color: var(--input-text);
+}
+
+/* Preserve the custom background while the field is focused. */
+#explorer #artist-search:focus {
+  background-color: var(--input-background);
+  color: var(--input-text);
+}
+
 #explorer .explorer-controls button {
   padding: 12px 18px;
   background-color: var(--button-background);
@@ -196,6 +211,98 @@ nav a:active {
   color: var(--heading-metal);
   text-align: center;
   margin-bottom: 15px;
+}
+
+/* ===== Automatic Artist Discography ===== */
+
+#discography {
+  margin: 30px 0 24px;
+}
+
+/* Match the metallic-gray explorer headings. */
+#discography h3 {
+  font-family: "Sancreek", serif;
+  font-size: 1.6rem;
+  font-weight: normal;
+  color: var(--heading-metal);
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+/* Explain where the album information comes from. */
+#discography .catalog-source {
+  font-family: "Trebuchet MS", Arial, sans-serif;
+  font-size: 0.95rem;
+  font-weight: normal;
+  line-height: 1.6;
+  color: var(--biography-text);
+  text-align: center;
+}
+
+/* Match our existing API results containers. */
+#discography-results {
+  padding: 20px;
+  margin-top: 18px;
+  background-color: var(--result-background);
+  border: 1px solid var(--result-border);
+  border-radius: 8px;
+  font-family: "Trebuchet MS", Arial, sans-serif;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--result-text);
+  text-align: center;
+}
+
+/* Album list we'll generate with JavaScript. */
+#discography .discography-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 16px;
+  text-align: left;
+}
+
+#discography .discography-list li {
+  padding: 10px 8px;
+  border-bottom: 1px solid var(--result-border);
+}
+
+/* Expandable discography control. */
+#discography summary {
+  cursor: pointer;
+  color: var(--heading-metal);
+  font-weight: bold;
+}
+
+/* ===== Apple Artist Selection ===== */
+
+/* Label shown when multiple artists have the same name */
+#discography-results label[for="apple-artist-choice"] {
+  display: block;
+  margin-bottom: 12px;
+  font-family: "Trebuchet MS", Arial, sans-serif;
+  font-size: 1rem;
+  font-weight: normal;
+  color: var(--label-green);
+}
+
+/* Artist selection dropdown */
+#apple-artist-choice {
+  width: 100%;
+  padding: 12px;
+  background-color: var(--input-background);
+  color: var(--input-text);
+  border: 1px solid var(--explorer-border);
+  border-radius: 6px;
+  font-family: "Trebuchet MS", Arial, sans-serif;
+  font-size: 0.95rem;
+  cursor: pointer;
+  color-scheme: dark;
+}
+
+/* Dropdown options */
+#apple-artist-choice option {
+  background-color: var(--input-background);
+  color: var(--input-text);
 }
 
 /* Artist results remain darker than the translucent outer panel. */
@@ -441,4 +548,35 @@ footer {
   color: #d8c690;
   text-align: left;
   white-space: pre-line;
+}
+
+/* Clickable albums inside the automatic discography */
+#discography .discography-album {
+  display: block;
+  width: 100%;
+  padding: 0;
+  border: none;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+#discography .discography-album:hover {
+  text-decoration: underline;
+}
+
+/* Track listing for the selected album */
+#album-results .apple-track-list {
+  max-width: 520px;
+  margin: 16px auto;
+  padding-left: 28px;
+  text-align: left;
+  font-family: "Trebuchet MS", Arial, sans-serif;
+  line-height: 1.8;
+}
+
+#album-results .apple-track-list li {
+  padding: 5px 0;
 }
