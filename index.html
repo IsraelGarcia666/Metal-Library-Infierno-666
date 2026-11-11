@@ -46,12 +46,14 @@
       <a href="index.html">Go Home</a>
     </div>
 
-    <header>
+    <header id="top">
       <h1 class="title">Metal Library Infierno 666</h1>
-      <nav>
+
+      <!-- Main navigation -->
+      <nav aria-label="Main navigation">
         <a href="#explorer">Artist Explorer</a>
-        <a href="#quote">Quote</a>
-        <a href="#media">Infierno Media</a>
+        <a href="#discography">Discography</a>
+        <a href="#album-controls">Album Details</a>
       </nav>
     </header>
 
@@ -114,6 +116,9 @@
         <div id="album-results" aria-live="polite">
           <p>Select an artist and enter an album title to explore.</p>
         </div>
+
+        <!-- Return to the artist discography -->
+        <a href="#discography" class="return-link"> ↑ Back to Discography </a>
       </section>
 
       <aside>
@@ -141,16 +146,27 @@
           </figure>
           <br />
 
-          <h3>Our Partners:</h3>
+          <h3>Beyond the Archives:</h3>
+          <br />
+          <!-- External heavy metal resource -->
+          <p>Discover more about heavy metal history, music, and culture.</p>
 
-          <!--Embed External Media-->
-          <embed
-            src="https://www.themetalmag.com/category/read-each-issue-for-free-on-the-site-and-keep-history-in-your-collection/.pdf"
-            type="application/pdf"
-            width="560"
-            height="315"
-          /><br />
-          <p>Explore the ultimate metal music database at The Metal Mag.</p>
+          <!-- Clickable Metal Mag banner -->
+          <a
+            href="https://www.themetalmag.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="metal-mag-link"
+            aria-label="Visit The Metal Mag website"
+          >
+            <img
+              src="metal-mag-banner.webp"
+              alt="The Metal Mag promotional banner"
+              loading="lazy"
+            />
+          </a>
+          <br />
+          <p>Metal-Evolution, The history of metal.</p>
           <iframe
             width="560"
             height="315"
@@ -168,8 +184,6 @@
             referrerpolicy="strict-origin-when-cross-origin"
             allowfullscreen
           ></iframe>
-
-          <p>Metal-Evolution, The history of metal.</p>
 
           <div class="source-links">
             <h4>Other Sources</h4>
@@ -197,7 +211,54 @@
     </main>
 
     <footer>
-      <p>&copy; 2025 Metal Library Infierno 666. All rights reserved.</p>
+      <p class="footer-main">
+        &copy; <span id="copyright-year">2026</span>
+        Metal Library Infierno 666
+      </p>
+
+      <p class="footer-creator">Created by Israel Garcia Real</p>
+
+      <p class="footer-data">
+        Music data:
+        <a
+          href="https://www.theaudiodb.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+          >TheAudioDB</a
+        >
+        &middot;
+        <a
+          href="https://music.apple.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+          >Apple Music</a
+        >
+      </p>
+
+      <details class="footer-details">
+        <summary>Artwork &amp; Credits</summary>
+
+        <p>
+          Fantasy background adapted for Metal Library Infierno 666. Original
+          artwork:
+          <a
+            href="https://www.magnific.com/free-photos-vectors/underground-fantasy-concept-art/2"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Designed by Magnific </a
+          >.
+        </p>
+
+        <p>Logo and banner: AI-generated with ChatGPT (2025).</p>
+
+        <p>
+          Artist photographs and album covers remain the property of their
+          respective rights holders.
+        </p>
+      </details>
+
+      <a href="#top" class="return-link"> ↑ Back to Top </a>
     </footer>
   </body>
 </html>

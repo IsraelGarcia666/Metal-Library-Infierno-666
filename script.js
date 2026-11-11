@@ -462,3 +462,10 @@ async function showAppleAlbum(album) {
       "Unable to retrieve the selected album's tracks.";
   }
 }
+
+/* ===== Automatic Copyright Year ===== */
+const copyrightYear = document.getElementById("copyright-year");
+
+if (copyrightYear) {
+  copyrightYear.textContent = new Date().getFullYear();
+}
