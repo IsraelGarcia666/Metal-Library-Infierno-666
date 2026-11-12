@@ -138,8 +138,24 @@ nav a:active {
   border-radius: 8px;
 }
 
-#explorer p {
+/* ===== Artist Explorer Introduction ===== */
+#explorer > p {
+  font-family: "Trebuchet MS", Arial, sans-serif;
+  font-size: 1.2rem;
+  font-weight: normal;
+  color: #d8c690;
+  text-align: center;
+  text-transform: none;
+  font-variant: normal;
+  letter-spacing: normal;
   line-height: 1.6;
+  margin: 16px auto 24px;
+}
+
+/* Center the initial message inside the black results box */
+#artist-results > p:not([class]) {
+  text-align: center;
+  margin: 0 auto;
 }
 
 /* Both the artist and album search use the same control layout. */
