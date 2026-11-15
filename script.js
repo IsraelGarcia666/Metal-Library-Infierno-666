@@ -101,6 +101,7 @@ async function searchAlbum() {
   const albumName = albumSearch.value.trim();
 
   // Check that both fields contain information.
+
   if (!artistName || !albumName) {
     albumResults.textContent =
       "Please select an artist and enter an album title.";
@@ -128,8 +129,9 @@ async function searchAlbum() {
 
     if (!data.album || data.album.length === 0) {
       albumResults.textContent =
-        "Sorry, nothing in our archives! Dust off the physical album, " +
-        "put it on, and let the music do the talking. 🤘";
+        `No record of "${albumName}" was found for "${artistName}" ` +
+        `in our archives. Check the artist and album title, ` +
+        `or perhaps the demons filed it under another band! 🤘`;
       return;
     }
 
@@ -469,3 +471,45 @@ const copyrightYear = document.getElementById("copyright-year");
 if (copyrightYear) {
   copyrightYear.textContent = new Date().getFullYear();
 }
+
+/* ===== Search Using the Enter Key ===== */
+
+// Search for an artist by pressing Enter.
+artistSearch.addEventListener("keydown", (event) => {
+  if (event.key === "Enter") {
+    event.preventDefault();
+    searchButton.click();
+  }
+});
+
+/* ===== Keep Artist Search Fields Synchronized ===== */
+
+// Typing an artist name clears the dropdown selection.
+artistSearch.addEventListener("input", () => {
+  if (artistSearch.value.trim()) {
+    artistSelect.value = "";
+  }
+});
+
+// Selecting an artist clears the manual search field.
+artistSelect.addEventListener("change", () => {
+  if (artistSelect.value) {
+    artistSearch.value = "";
+  }
+});
+
+// Search for an album by pressing Enter.
+albumSearch.addEventListener("keydown", (event) => {
+  if (event.key === "Enter") {
+    event.preventDefault();
+    albumSearchButton.click();
+  }
+});
+
+/* Search using the artist dropdown and Enter key. */
+artistSelect.addEventListener("keydown", (event) => {
+  if (event.key === "Enter" && artistSelect.value) {
+    event.preventDefault();
+    searchButton.click();
+  }
+});
