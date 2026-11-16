@@ -7,9 +7,11 @@
 **Developer:** Israel Garcia Real  
 **Laurea University of Applied Sciences**
 
-**Live website:** https://www.israelgarciareal.dev/Metal-Library-Infierno-666/  
-**GitHub repository:** https://github.com/IsraelGarcia666/Metal-Library-Infierno-666
-**Video demonstration:** https://www.youtube.com/watch?v=ImrZZ7ui_9I
+### Project Links
+
+- 🌐 **Live Application:** [Explore Metal Library Infierno 666](https://www.israelgarciareal.dev/Metal-Library-Infierno-666/)
+- 💻 **GitHub Repository:** [View Source Code](https://github.com/IsraelGarcia666/Metal-Library-Infierno-666)
+- 🎬 **Video Demonstration:** [Watch on YouTube (6:34)](https://www.youtube.com/watch?v=ImrZZ7ui_9I)
 
 ## 1. Project Overview
 
