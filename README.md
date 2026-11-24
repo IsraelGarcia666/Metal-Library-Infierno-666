@@ -119,6 +119,32 @@ The website preserves the gothic and infernal visual concept of my original proj
 
 The website is an educational project and is not affiliated with or endorsed by these music services.
 
+## Feedback and Improvements
+
+### Feedback received – November 17, 2026
+
+During the evaluation of the website, I received feedback regarding the external links under the "Other Sources" section. The links were not sufficiently visible and were difficult to identify, especially on mobile devices, due to the detailed background artwork.
+
+### Improvements implemented
+
+Based on this feedback, I made the following changes:
+
+- Replaced the original text links with compact, clickable resource cards.
+- Renamed the section to "Explore the Metal Universe."
+- Added professional SVG icons using the Lucide library.
+- Added short descriptions to clarify the purpose of each external resource.
+- Introduced individual hover colors and glow effects.
+- Preserved the original green color for clicked links using JavaScript and localStorage.
+- Improved the responsive layout for mobile devices.
+- Preserved the transparency and original gothic visual identity of the website.
+- Moved the new JavaScript functionality from the HTML document to the external JavaScript file, following the Separation of Concerns principle.
+
+### Testing and reflection
+
+I tested the changes locally using VS Code Live Server and Chrome Developer Tools, including mobile screen simulation.
+
+This feedback helped me understand that visual design is not only about aesthetics but also about usability, readability, and accessibility. My intention was to improve the user experience without losing the original artistic concept of Metal Library – Infierno 666.
+
 ## 9. AI Use Disclosure
 
 I used ChatGPT as a learning and development assistant throughout this project, especially when working with JavaScript, AJAX, and REST APIs.
