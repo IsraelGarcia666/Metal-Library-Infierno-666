@@ -36,6 +36,8 @@
         }
       </style>
     </noscript>
+    <!-- Lucide icons for the external resource cards -->
+    <script src="https://unpkg.com/lucide@latest"></script>
 
     <!-- Metal Library: AJAX application -->
     <script src="script.js" defer></script>
@@ -189,26 +191,85 @@
             allowfullscreen
           ></iframe>
 
+          <!-- External metal resources -->
           <div class="source-links">
-            <h4>Other Sources</h4>
-            <!--Media Links-->
-            <p>
-              <a href="https://www.metal-archives.com/" target="_blank"
-                >Metal-Archives</a
-              >
-              |
+            <h4>Explore the Metal Universe</h4>
+
+            <div class="resource-grid">
               <a
+                class="resource-card"
+                href="https://www.metal-archives.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i
+                  data-lucide="library-big"
+                  class="resource-icon"
+                  aria-hidden="true"
+                ></i>
+
+                <span class="resource-copy">
+                  <span class="resource-title">Metal Archives</span>
+                  <span class="resource-description"
+                    >Bands &amp; discographies</span
+                  >
+                </span>
+
+                <i
+                  data-lucide="arrow-up-right"
+                  class="resource-arrow"
+                  aria-hidden="true"
+                ></i>
+              </a>
+
+              <a
+                class="resource-card"
                 href="https://www.themetalverse.net/the-best-metal-blogs-in-2024/"
                 target="_blank"
-                >Metalverse</a
+                rel="noopener noreferrer"
               >
-              |
+                <i
+                  data-lucide="globe"
+                  class="resource-icon"
+                  aria-hidden="true"
+                ></i>
+
+                <span class="resource-copy">
+                  <span class="resource-title">Metalverse</span>
+                  <span class="resource-description">Metal publications</span>
+                </span>
+
+                <i
+                  data-lucide="arrow-up-right"
+                  class="resource-arrow"
+                  aria-hidden="true"
+                ></i>
+              </a>
+
               <a
+                class="resource-card"
                 href="https://www.metal-archives.com/artists/Israel_Real/53762y"
                 target="_blank"
-                >CEO</a
+                rel="noopener noreferrer"
               >
-            </p>
+                <i
+                  data-lucide="swords"
+                  class="resource-icon"
+                  aria-hidden="true"
+                ></i>
+
+                <span class="resource-copy">
+                  <span class="resource-title">CEO</span>
+                  <span class="resource-description">Artist profile</span>
+                </span>
+
+                <i
+                  data-lucide="arrow-up-right"
+                  class="resource-arrow"
+                  aria-hidden="true"
+                ></i>
+              </a>
+            </div>
           </div>
         </article>
       </section>

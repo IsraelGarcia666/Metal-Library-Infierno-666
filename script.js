@@ -513,3 +513,31 @@ artistSelect.addEventListener("keydown", (event) => {
     searchButton.click();
   }
 });
+
+// ==========================================
+// EXTERNAL RESOURCE CARDS
+// Icons and persistent visited-link status
+// ==========================================
+
+document.addEventListener("DOMContentLoaded", () => {
+  // Initialize Lucide SVG icons.
+  if (typeof lucide !== "undefined") {
+    lucide.createIcons();
+  }
+
+  // Remember which resource cards the visitor has clicked.
+  document.querySelectorAll(".resource-card").forEach((card) => {
+    const key = "infierno-visited:" + card.href;
+
+    // Restore the visited state when the page loads.
+    if (localStorage.getItem(key) === "true") {
+      card.classList.add("is-visited");
+    }
+
+    // Save the visited state when the card is clicked.
+    card.addEventListener("click", () => {
+      localStorage.setItem(key, "true");
+      card.classList.add("is-visited");
+    });
+  });
+});

@@ -495,17 +495,157 @@ iframe {
     border-color 0.3s ease;
 }
 
-.source-links a {
-  color: #072bf4 !important;
+/* =========================================
+   METAL RESOURCE CARDS
+   Compact, transparent and responsive
+   ========================================= */
+
+.source-links {
+  max-width: 780px;
+  margin: 20px auto;
+  padding: 12px;
+  background: transparent;
+  border: none;
 }
 
-.source-links a:visited {
-  color: #3eeb09 !important;
+.source-links h4 {
+  color: #e4c99d;
+  text-align: center;
+  margin: 0 0 12px;
+  font-size: 1.1rem;
 }
 
-.source-links a:hover {
-  color: #dd0b0b !important;
-  text-decoration: underline;
+/* Compact desktop layout */
+.resource-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+}
+
+/* Transparent resource cards */
+.source-links .resource-card {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  min-height: 48px;
+  padding: 10px 12px;
+  box-sizing: border-box;
+
+  background: rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(185, 145, 85, 0.55);
+  border-radius: 5px;
+
+  color: #eacb8a;
+  text-decoration: none;
+  text-align: left;
+
+  transition:
+    background 0.25s,
+    border-color 0.25s,
+    box-shadow 0.25s;
+}
+
+/* Green title after the visitor clicks a resource card */
+.source-links .resource-card.is-visited .resource-title {
+  color: #3eeb09;
+}
+
+/* Individual hover colors */
+
+/* Metal Archives - Infernal red */
+.resource-card:nth-child(1) {
+  --hover-color: #ff453a;
+  --hover-rgb: 255, 69, 58;
+}
+
+/* Metalverse - Electric blue */
+.resource-card:nth-child(2) {
+  --hover-color: #38a9ef;
+  --hover-rgb: 56, 169, 239;
+}
+
+/* CEO - Metallic gold */
+.resource-card:nth-child(3) {
+  --hover-color: #d9a441;
+  --hover-rgb: 217, 164, 65;
+}
+
+/* Individual glow and transparent background */
+.source-links .resource-card:hover,
+.source-links .resource-card:focus-visible {
+  background: rgba(var(--hover-rgb), 0.12);
+  border-color: var(--hover-color);
+  box-shadow: 0 0 14px rgba(var(--hover-rgb), 0.45);
+  text-decoration: none;
+}
+
+/* Change icon colors when hovering */
+.resource-card:hover .resource-icon,
+.resource-card:hover .resource-arrow {
+  stroke: var(--hover-color);
+}
+
+/* Metallic gold line icons */
+.resource-icon {
+  width: 22px;
+  height: 22px;
+  stroke: #c5a16a;
+  stroke-width: 1.5;
+  flex-shrink: 0;
+}
+
+.resource-copy {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  flex: 1;
+  min-width: 0;
+}
+
+.resource-title {
+  font-size: 0.95rem;
+  font-weight: bold;
+  line-height: 1.2;
+}
+
+.resource-description {
+  font-family: Arial, sans-serif;
+  font-size: 0.75rem;
+  line-height: 1.3;
+  color: #ddd0bc;
+}
+
+.resource-arrow {
+  width: 13px;
+  height: 13px;
+  stroke: #c5a16a;
+  flex-shrink: 0;
+}
+
+/* Compact mobile layout */
+@media (max-width: 700px) {
+  .resource-grid {
+    grid-template-columns: 1fr;
+    max-width: 340px;
+    margin: 0 auto;
+    gap: 8px;
+  }
+
+  .source-links {
+    padding: 8px;
+  }
+
+  .source-links .resource-card {
+    padding: 8px 12px;
+  }
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .source-links .resource-card {
+    transition: none;
+  }
 }
 
 /* 7. FOOTER AND JAVASCRIPT FALLBACK */
